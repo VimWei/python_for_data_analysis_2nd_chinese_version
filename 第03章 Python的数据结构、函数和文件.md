@@ -167,7 +167,7 @@ In [33]: a, b, *_ = values
 ```
 
 ## tuple方法
-因为元组的大小和内容不能修改，它的实例方法都很轻量。其中一个很有用的就是``count``（也适用于列表），它可以统计某个值得出现频率：
+因为元组的大小和内容不能修改，它的实例方法都很轻量。其中一个很有用的就是``count``（也适用于列表），它可以统计某个值的出现频率：
 
 ```python
 In [34]: a = (1, 2, 2, 2, 3, 4, 2)
@@ -520,7 +520,7 @@ Out[100]: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 要记住``reversed``是一个生成器（后面详细介绍），只有实体化（即列表或for循环）之后才能创建翻转的序列。
 
 ## 字典
-字典可能是Python最为重要的数据结构。它更为常见的名字是哈希映射或关联数组。它是键值对的大小可变集合，键和值都是Python对象。创建字典的方法之一是使用尖括号，用冒号分隔键和值：
+字典可能是Python最为重要的数据结构。它更为常见的名字是哈希映射或关联数组。它是键值对的大小可变集合，键和值都是Python对象。创建字典的方法之一是使用花括号，用冒号分隔键和值：
 
 ```python
 In [101]: empty_dict = {}
@@ -556,7 +556,7 @@ Out[107]: True
 In [108]: d1[5] = 'some value'
 
 In [109]: d1
-Out[109]: 
+Out[109]:
 {'a': 'some value',
  'b': [1, 2, 3, 4],
  7: 'an integer',
@@ -565,7 +565,7 @@ Out[109]:
 In [110]: d1['dummy'] = 'another value'
 
 In [111]: d1
-Out[111]: 
+Out[111]:
 {'a': 'some value',
  'b': [1, 2, 3, 4],
  7: 'an integer',
@@ -575,7 +575,7 @@ Out[111]:
 In [112]: del d1[5]
 
 In [113]: d1
-Out[113]: 
+Out[113]:
 {'a': 'some value',
  'b': [1, 2, 3, 4],
  7: 'an integer',
@@ -705,7 +705,7 @@ Out[132]: {(1, 2, 3): 5}
 ```
 
 ## 集合
-集合是无序的不可重复的元素的集合。你可以把它当做字典，但是只有键没有值。可以用两种方式创建集合：通过set函数或使用尖括号set语句：
+集合是无序的不可重复的元素的集合。你可以把它当做字典，但是只有键没有值。可以用两种方式创建集合：通过set函数或使用花括号set语句：
 
 ```python
 In [133]: set([2, 2, 2, 1, 3, 3])
@@ -826,7 +826,7 @@ Out[155]: ['BAT', 'CAR', 'DOVE', 'PYTHON']
 dict_comp = {key-expr : value-expr for value in collection if condition}
 ```
 
-集合的推导式与列表很像，只不过用的是尖括号：
+集合的推导式与列表很像，只不过用的是花括号：
 
 ```python
 set_comp = {expr for value in collection if condition}
@@ -1039,7 +1039,7 @@ def clean_strings(strings):
 
 ```python
 In [173]: clean_strings(states)
-Out[173]: 
+Out[173]:
 ['Alabama',
  'Georgia',
  'Georgia',
@@ -1070,7 +1070,7 @@ def clean_strings(strings, ops):
 
 ```python
 In [175]: clean_strings(states, clean_ops)
-Out[175]: 
+Out[175]:
 ['Alabama',
  'Georgia',
  'Georgia',
@@ -1087,7 +1087,7 @@ Out[175]:
 ```python
 In [176]: for x in map(remove_punctuation, states):
    .....:     print(x)
-Alabama 
+Alabama
 Georgia
 Georgia
 georgia
@@ -1261,7 +1261,7 @@ S ['Steven']
 ![表3-2 一些有用的itertools函数](http://upload-images.jianshu.io/upload_images/7178691-111823d8767a104d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 错误和异常处理
-优雅地处理Python的错误和异常是构建健壮程序的重要部分。在数据分析中，许多函数函数只用于部分输入。例如，Python的float函数可以将字符串转换成浮点数，但输入有误时，有``ValueError``错误：
+优雅地处理Python的错误和异常是构建健壮程序的重要部分。在数据分析中，许多函数只用于部分输入。例如，Python的float函数可以将字符串转换成浮点数，但输入有误时，有``ValueError``错误：
 
 ```python
 In [197]: float('1.2345')
@@ -1424,7 +1424,7 @@ for line in f:
 In [209]: lines = [x.rstrip() for x in open(path)]
 
 In [210]: lines
-Out[210]: 
+Out[210]:
 ['Sueña el rico en su riqueza,',
  'que más cuidados le ofrece;',
  '',
@@ -1520,7 +1520,7 @@ In [226]: with open('tmp.txt') as f:
    .....:     lines = f.readlines()
 
 In [227]: lines
-Out[227]: 
+Out[227]:
 ['Sueña el rico en su riqueza,\n',
  'que más cuidados le ofrece;\n',
  'sueña el pobre que padece\n',
